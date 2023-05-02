@@ -1,3 +1,9 @@
+fields @timestamp, @message
+| filter message like "StoppedTask: Task failed to start" or message like "Essential container in task exited"
+| sort @timestamp desc
+| limit 20
+
+
 import yaml
 import json
 
